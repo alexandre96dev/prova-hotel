@@ -10,4 +10,11 @@ export default class HotelRepositoryDatabase {
     async listHotels(): Promise<any> {
       return await Database.hotel.findMany();
     }
+    async listAllRoomsByHotelId(hotel_id: number): Promise<any>{
+      return await Database.room.findMany({
+        where:{
+          hotel_id: hotel_id
+        }
+      })
+    }
 }

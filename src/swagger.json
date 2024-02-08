@@ -1,0 +1,75 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Hotel",
+      "description": "API gerenciador de hotelaria",
+      "version": "1.0"
+    },
+    "host": "localhost:4000",
+    "basePath": "/api",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/api/hotels/register": {
+        "post": {
+          "description": "Informe os dados referentes ao hotel.",
+          "operationId": "Inserir hotel",
+          "parameters": [
+            {
+              "name": "name",
+              "in": "path",
+              "description": "Informe o nome do hotel",
+              "required": true,
+              "default": "Hotel da luz vermelha swagger"
+            },
+            {
+              "name": "address",
+              "in": "path",
+              "description": "Informe o endereço do hotel",
+              "required": true,
+              "default": "Rua dos bobos, swagger"
+            },
+            {
+              "name": "description",
+              "in": "path",
+              "description": "Informe uma descrição do hotel",
+              "required": false,
+              "default": ""
+            }
+          ],
+          "responses": {}
+        }
+      },
+      "/api/rooms/register": {
+        "post": {
+          "description": "Informe os dados referentes ao quarto.",
+          "operationId": "Inserir quarto",
+          "parameters": [
+            {
+              "name": "hotel_id",
+              "in": "path",
+              "description": "Informe o id do hotel que o quarto pertence",
+              "required": true,
+              "default": "1"
+            },
+            {
+              "name": "room_number",
+              "in": "path",
+              "description": "Informe o numero do quarto",
+              "required": true,
+              "default": "6969"
+            },
+            {
+              "name": "type",
+              "in": "path",
+              "description": "Informe o tipo do quarto",
+              "required": true,
+              "default": "Suíte Presidencial"
+            }
+          ],
+          "responses": {}
+        }
+      }
+    }   
+}

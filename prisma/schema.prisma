@@ -25,3 +25,13 @@ model Room {
   type String @default("")
   price  Float 
 }
+
+model Reservations{
+  id   Int @id @default(autoincrement())
+  user_id Int
+  room_id Int
+  check_in_date DateTime
+  check_out_date DateTime
+  total_price Float
+  status Int @default(1)
+}

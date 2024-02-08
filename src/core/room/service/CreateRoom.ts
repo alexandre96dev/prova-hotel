@@ -16,6 +16,6 @@ export default class CreateRoom implements CasoDeUso<Room, void>
             price: room.price,
         }
 
-        this.createRoomRepository.createHotel(newRoom)
+        this.createRoomRepository.createRoom(newRoom)
     }
 }
